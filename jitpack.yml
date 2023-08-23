@@ -1,0 +1,6 @@
+jdk:
+  - openjdk17
+before_install:
+   - make deps
+install:
+   - ./mvnw clean install -Dmaven.test.skip -P '!setup-test-cluster'
